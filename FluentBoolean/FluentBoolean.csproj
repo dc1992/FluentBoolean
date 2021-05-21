@@ -1,7 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;netstandard2.1</TargetFrameworks>
+	<PackageId>FluentBoolean</PackageId>
+	<Version>1.0.1</Version>
+	<Authors>Diego Ceccacci</Authors>
+	<PackageDescription>A set of bool's extension methods</PackageDescription>
+	<RepositoryUrl>https://github.com/dc1992/FluentBoolean</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
