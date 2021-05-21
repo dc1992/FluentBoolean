@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	<PackageId>FluentBoolean</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>Diego Ceccacci</Authors>
+	<PackageDescription>A set of bool's extension methods</PackageDescription>
+	<RepositoryUrl>https://github.com/dc1992/FluentBoolean</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
