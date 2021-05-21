@@ -3,7 +3,7 @@ WIth this library you can use the fluent interface for the classic boolean's ope
 
 Install with NuGet:
 ``` NuGet
-Install-Package FluentBoolean -Version 1.0.0
+Install-Package FluentBoolean -Version 1.0.1
 ```
 
 Examples:
