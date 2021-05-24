@@ -1,7 +1,7 @@
 FluentBoolean is a set of bool's extension methods.  
-WIth this library you can use the fluent interface for the classic boolean's operations (NOT, OR, AND, XOR, NOR, NAND, XNOR)
+With this library you can use the fluent interface for the classic boolean's operations (NOT, OR, AND, XOR, NOR, NAND, XNOR)
 
-Install with NuGet:
+Install with [NuGet](https://www.nuget.org/packages/FluentBoolean):
 ``` NuGet
 Install-Package FluentBoolean -Version 1.0.1
 ```
