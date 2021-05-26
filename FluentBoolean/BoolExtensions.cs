@@ -2,53 +2,59 @@
 {
     public static class BoolExtensions
     {
-        public static bool NOT(this bool @operator)
+        public static bool NOT(this bool @Value)
         {
-            var result = !@operator;
+            var result = !@Value;
 
             return result;
         }
 
-        public static bool OR(this bool firstOperator, bool secondOperator)
+        public static bool OR(this bool firstValue, bool secondValue, params bool[] additionalValues)
         {
-            var result = firstOperator || secondOperator;
+            var result = firstValue || secondValue;
+
+            foreach (var additionalValue in additionalValues)
+                result = result || additionalValue;
 
             return result;
         }
 
-        public static bool AND(this bool firstOperator, bool secondOperator)
+        public static bool AND(this bool firstValue, bool secondValue, params bool[] additionalValues)
         {
-            var result = firstOperator && secondOperator;
+            var result = firstValue && secondValue;
+
+            foreach (var additionalValue in additionalValues)
+                result = result && additionalValue;
 
             return result;
         }
 
-        public static bool XOR(this bool firstOperator, bool secondOperator)
+        public static bool XOR(this bool firstValue, bool secondValue)
         {
-            var result = firstOperator != secondOperator;
+            var result = firstValue != secondValue;
 
             return result;
         }
 
-        public static bool NAND(this bool firstOperator, bool secondOperator)
+        public static bool NAND(this bool firstValue, bool secondValue)
         {
-            var and = firstOperator.AND(secondOperator);
+            var and = firstValue.AND(secondValue);
             var result = and.NOT();
 
             return result;
         }
 
-        public static bool NOR(this bool firstOperator, bool secondOperator)
+        public static bool NOR(this bool firstValue, bool secondValue)
         {
-            var or = firstOperator.OR(secondOperator);
+            var or = firstValue.OR(secondValue);
             var result = or.NOT();
 
             return result;
         }
 
-        public static bool XNOR(this bool firstOperator, bool secondOperator)
+        public static bool XNOR(this bool firstValue, bool secondValue)
         {
-            var xor = firstOperator.XOR(secondOperator);
+            var xor = firstValue.XOR(secondValue);
             var result = xor.NOT();
 
             return result;
