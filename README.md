@@ -3,14 +3,14 @@ With this library you can use the fluent interface for the classic boolean's ope
 
 Install with [NuGet](https://www.nuget.org/packages/FluentBoolean):
 ``` NuGet
-Install-Package FluentBoolean -Version 1.0.2
+Install-Package FluentBoolean -Version 1.1.0
 ```
 
 Examples:
 ```C#
 using FluentBoolean;
 
-public void Test()
+public void ChainedOr()
 {
     var fluentResult = true
         .OR(false)
@@ -25,7 +25,7 @@ public void Test()
 ```C#
 using FluentBoolean;
 
-public void Test()
+public void ChainedAnd()
 {
     var fluentResult = true
         .AND(false)
@@ -33,6 +33,19 @@ public void Test()
         .AND(true);
 
     var classicResult = true && false && true && true;
+
+    //fluentResult and classicResult produce the same result
+}
+```
+```C#
+using FluentBoolean;
+
+public void MultipleOr()
+{
+    var fluentResult = true
+        .OR(false, true);
+
+    var classicResult = true || false || true;
 
     //fluentResult and classicResult produce the same result
 }
